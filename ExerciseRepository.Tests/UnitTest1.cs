@@ -47,12 +47,16 @@ public class UnitTest1
         //Act & Assert
         LeapYearEveryFourYears = placeHolderProgram.IsLeapYear(1600);
         Assert.True(LeapYearEveryFourYears);
+
         LeapYearEveryFourYears = placeHolderProgram.IsLeapYear(1700);
         Assert.False(LeapYearEveryFourYears);
+
         LeapYearEveryFourYears = placeHolderProgram.IsLeapYear(1800);
         Assert.False(LeapYearEveryFourYears);
+
         LeapYearEveryFourYears = placeHolderProgram.IsLeapYear(1900);
         Assert.False(LeapYearEveryFourYears);
+        
         LeapYearEveryFourYears = placeHolderProgram.IsLeapYear(2000);
         Assert.True(LeapYearEveryFourYears);
     }
