@@ -3,29 +3,57 @@ using ExerciseRepository;
 public class UnitTest1
 {
     [Fact]
-    public void Test1()
+    public void HelloWorldTestOfTestingFeature()
     {
 
         //Arrange
-        String helloTest = "";
-        Program TestObject = new Program();
+        String helloWorldTest = "";
+        Program placeHolderProgram = new Program();
         //Act
-        helloTest = TestObject.HelloWorld();
+        helloWorldTest = placeHolderProgram.HelloWorld();
         //Assert
-        Assert.Equal("HelloWorld", helloTest);
+        Assert.Equal("HelloWorld", helloWorldTest);
     }
 
     [Fact]
 
-       public void Test2()
+       public void LeapYearEveryFourYears()
     {
-
         //Arrange
-        String helloTest = "";
-        Program TestObject = new Program();
-        //Act
-        helloTest = TestObject.HelloWorld();
-        //Assert
-        Assert.Equal("HelloWorld", helloTest);
+        bool LeapYearEveryFourYears = false;
+        Program placeHolderProgram = new Program();
+        //Act & Assert
+        LeapYearEveryFourYears = placeHolderProgram.IsLeapYear(4);
+        Assert.True(LeapYearEveryFourYears);
+
+        LeapYearEveryFourYears = placeHolderProgram.IsLeapYear(8);
+        Assert.True(LeapYearEveryFourYears);
+
+        LeapYearEveryFourYears = placeHolderProgram.IsLeapYear(12);
+        Assert.True(LeapYearEveryFourYears);
+
+        LeapYearEveryFourYears = placeHolderProgram.IsLeapYear(16);
+        Assert.True(LeapYearEveryFourYears);
+
+        LeapYearEveryFourYears = placeHolderProgram.IsLeapYear(20);
+        Assert.True(LeapYearEveryFourYears);
+    }
+    [Fact]
+           public void LeapYearEveryFourHundredYears()
+    {
+        //Arrange
+        bool LeapYearEveryFourYears = false;
+        Program placeHolderProgram = new Program();
+        //Act & Assert
+        LeapYearEveryFourYears = placeHolderProgram.IsLeapYear(1600);
+        Assert.True(LeapYearEveryFourYears);
+        LeapYearEveryFourYears = placeHolderProgram.IsLeapYear(1700);
+        Assert.False(LeapYearEveryFourYears);
+        LeapYearEveryFourYears = placeHolderProgram.IsLeapYear(1800);
+        Assert.False(LeapYearEveryFourYears);
+        LeapYearEveryFourYears = placeHolderProgram.IsLeapYear(1900);
+        Assert.False(LeapYearEveryFourYears);
+        LeapYearEveryFourYears = placeHolderProgram.IsLeapYear(2000);
+        Assert.True(LeapYearEveryFourYears);
     }
 }
